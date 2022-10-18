@@ -1,0 +1,437 @@
+ html,
+    body,
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-family: "Lato", sans-serif;
+        font-size: small;
+    }
+
+    *{
+        box-sizing: border-box;
+        border-radius: 10px;
+    }
+
+    .mySlides {
+        display: none;
+    }
+
+    .w3-tag,
+    .fa {
+        cursor: pointer;
+    }
+
+    .w3-tag {
+        height: 15px;
+        width: 15px;
+        padding: 0;
+        margin-top: 6px;
+    }
+
+    #curves{
+        border-radius: 10px;
+        text-decoration: none;
+        opacity: 0.7;
+    }
+
+    .fname{
+        height: 40px;
+        width: 100%;
+       border: 0.5px solid black;
+       padding: 10px;
+    }
+    .fname:hover{
+    border: 2px solid black;
+    }
+
+    input:valid{
+        color: blue;
+    }
+    input:invalid{
+        color: red;
+    }
+
+    .lname{
+        width: 100%;
+        height: 40px;
+       border-style: solid;
+       padding: 10px;
+    }
+    .lname:hover{
+    border: 2px solid black;
+    }
+
+    #message{
+       border-style: solid;
+        padding: 8px;
+        text-indent: 10px;
+    }
+    #message:hover{
+    border: 2px solid black;
+    }
+
+    #curve1{
+        background-color: white; 
+        opacity: 0.7;
+        text-align: center;
+        padding: 8px;
+        border-radius: 6px;
+        text-decoration: none;
+    }
+    #curve1:hover{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    #serves{
+        max-width: 230px;
+        height: 200px;
+    }
+
+    #proandservGrid{
+      align-content: space-around; 
+    }
+
+    #TheCareer{
+        list-style-type: none;
+        position: relative;
+        z-index: 2;
+    }
+    #TheCareer1{
+        position: absolute;
+        z-index: 4;
+        list-style-type: none;
+        display: none;
+        background-color: gray;
+    }
+    
+    #training{
+            list-style-type: none;
+            position: relative;  
+    }
+
+    #training1{
+        position: absolute;
+        z-index: 3;
+        list-style-type: none;
+        display: none;
+        background-color: gray;
+        text-align: center;
+    }
+
+    #TheServices{
+        list-style-type: none;
+        position: relative;
+        z-index: 2;
+    }
+    #TheServices1{
+        position: absolute;
+        z-index: 3;
+        list-style-type: none;
+        display: none;
+        background-color: gray;
+    }
+    /* li a:hover{
+        display: block;
+    } */
+
+    .no{
+        text-decoration: none;
+        padding: 10px;
+    }
+    .no:hover{
+        background-color: whitesmoke;
+        text-align: center;
+    }
+
+    .s3{
+        overflow: auto;
+    }
+
+    #note{
+        background-color: yellowgreen;
+        padding: 5px;
+        margin: 15px;
+        width: 100%;
+        height: inherit;
+        clear: both;
+        position: fixed;
+        text-align: center;
+        letter-spacing: 5px;
+        font-size: medium;
+        overflow: auto;
+        /* display: none; */
+        z-index: 3;
+    }
+    #ok{
+        margin-left: 90px;
+        width: 80px;
+        padding: 5px;
+        position: relative;
+        z-index: 4;
+    }
+    #ok:hover{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    #shine:hover{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+ 
+    
+    .aboutLogo{
+            position: relative;
+            text-align: center;
+            color: white;
+    } 
+
+    .centerAboutText{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+ 
+
+    .imgL1{
+        vertical-align:sub;
+        letter-spacing: 8px;
+        font-weight: bold;
+        color: white;
+        font-size: large;
+    }
+
+    .aboutBody{
+        width: 100%;
+        padding: 50px;
+        background-color: lightgray;
+    }
+
+    .aboutBodyContainer{
+        width: 100%;
+        background-color: silver;
+        padding: 20px; 
+        height: 100%;
+    }
+
+    .whoWeAre{
+        width: 100%;
+        color: white;
+        background-color: gray;
+        padding: 4px;
+        clear: both;
+    }
+
+    .rowImg{
+        width:100% ;
+        float: left;
+        padding: 10px;
+    }
+    .rowImg1{
+        width: 100%;
+        float: left;
+        padding: 10px;
+    }
+    .rowImgText{
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+    }
+    .rowImgText1{
+        text-indent: 15px;
+        padding: 10px;
+        font-size: large;
+    }
+
+        .navList{
+            background-color: white;
+            width: 80%;
+            float: left;
+        }
+        .navList1{
+            list-style-type: none;
+        }
+        /* .navListChild{
+            list-style-type: none;
+        } */
+
+        .menuBtn{
+            position: relative;
+            z-index: 2;
+            clear: both;
+        }
+
+        .navListWrapper{
+            position: relative;
+            z-index: 4;
+            display: none;
+        }
+
+        .mobileNav{
+            display: none;
+        }
+        .desktopV{
+            width: 100%;
+            padding: 10px;
+            border: 1px solid gainsboro;
+        }
+
+        .navListChild,.navListChild1,.navListChild2{
+            display: none;
+            list-style-type: none;
+        }
+
+        #contact,#contact1,#contact2{
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            display: none; 
+            font-size: smaller;
+            overflow: auto;
+            position: relative;
+        }
+    
+        .rowAbout::after {
+            content: "";
+            clear: both;
+            display: block;
+            }
+    
+                     /*- ---- Medium devices (landscape tablets, 768px and up) */
+            @media only screen and (min-width: 768px) {
+                .rowImg{width: 50%;   float: left;}
+                .rowImg1{width: 50%; float: left;}
+                .rowImgText{width: 50%; float: left; text-align: justify;}
+                .rowImgText1{font-size: larger;}
+                .whoWeAre{font-size: x-large; padding-left: 1.5em; padding-right: 1em;}
+                .textThis{font-size: x-large; padding-left: 1.5em; padding-right: 1em; }
+                .listThis{font-size: x-large; padding-left: 1.5em; padding-right: 1em;}
+                 /* .navBar{display: none;}
+                .mobileNav{display: block;} */
+            }
+                /* ----- * - for mobile and smaller devices */
+            @media screen and (max-width: 600px) {
+                #fttx{font-size: 11px;}
+                .imgL1{font-size: small; letter-spacing: 3px;}
+                .navBar{display: none;}
+                .mobileNav{display: block;}
+                .textThis{padding-left: 1em; padding-right: 0.5em;}
+                .listThis{padding-left: 1em; padding-right: 0.5em;}
+                .whoWeAre{padding-left: 1em; padding-right: 0.5em;}
+                }
+
+                     /* ----Large devices (laptops/desktops, 992px and up) */
+            @media only screen and (min-width: 992px) {
+                .rowImg{max-width: 50%;   float: left;}
+                .rowImg1{max-width: 50%; float: left;}
+                .rowImgText{max-width: 50%;  float: left; text-align: justify;}
+                .rowImgText1{font-size: larger;}
+                .whoWeAre{font-size: x-large;}
+                .textThis{font-size: x-large;}
+                .listThis{font-size: x-large;}
+                #message{width: 100%;}
+            }
+
+                    /* ------Extra large devices (large laptops and desktops, 1200px and up) */
+            @media only screen and (min-width: 1200px) {
+                .rowImg{max-width: 50%;;  float: left;}
+                .rowImg1{max-width: 50%; float: left;}
+                .rowImgText{max-width: 50%;  float: left; text-align: justify;}
+                .rowImgText1{font-size: x-large; }
+                .whoWeAre{font-size: x-large;}
+                .textThis{font-size: x-large;}
+                .listThis{font-size: x-large;}
+            }
+
+        .textThis{
+            text-indent: 20px;
+        }
+        #quote{
+            border-left:5px solid olivedrab; 
+            padding-left:18px;
+            background-color: ghostwhite;
+        }
+        .centerAboutText > h1{
+            letter-spacing:11px;
+            font-weight:bolder;
+            text-align: center;
+            color: white;
+        }
+
+            /*------ THIS IS FOR EVENTS */
+
+        .eventLogo{
+             position: relative;
+             text-align: center;
+             color: white;
+        }
+
+       .eventBody{
+            width: 100%;
+            padding: 50px;
+            background-color: lightgray;
+       }
+
+       .eventBodyContainer{
+                width: 100%;
+                background-color: silver;
+                padding: 20px; 
+                height: 100%;
+       }
+
+       .eventVideo{
+           overflow: auto;
+       }
+            /* -----This is the Product Catalogue Side-- */
+
+       .pcBody{
+           width: 100%;
+           background-color: snow;
+           padding: 50px;
+       }
+ 
+
+       .pcheader1{
+           letter-spacing: 9px;
+           font-family: Dosis;
+       }
+
+       .pcBodyContainer{
+           background-color: wheat;
+           padding: 10px;
+       }
+       .rowPc::after {
+            content: "";
+            clear: both;
+            display: block;}
+        
+            .padbig{
+                padding:2em;
+            }
+
+            .win{
+                /* text-decoration: none; */
+                 color:whitesmoke;
+            }
+
+            #spa-up{
+                margin-top: .7em;
+                margin-bottom: 6.9em;
+            }
+            #spa-upp{
+                /* margin-top: 2em; */
+            }
+
+            #space-train{
+                margin-top: 1.6em;
+            }
+
+            .sjsj{
+            margin-bottom: 2.7em;
+            }
+
+            .gtgg{
+                margin-bottom: 1.5em;
+            }
+
+            /* .uuyu{
+                margin-bottom: 5px;
+            } */
