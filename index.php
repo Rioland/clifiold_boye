@@ -505,18 +505,18 @@
                     </div><br />
                     <div class="wow">
 
-                        <form action="#" method="post" class="needs-validation" novalidate>
+                        <form action="app/api.php" method="post" class="needs-validation" novalidate >
                             <div class="row">
                                 <div class="col-md-4 mb-3">
                                     <label for="validationTooltip01">First name:</label>
-                                    <input type="text" class="form-control" id="validationTooltip01" placeholder="First name" value="Mark" required>
+                                    <input type="text" class="form-control" id="validationTooltip01" name="fname" placeholder="First name" value="Mark" required>
                                     <div class="valid-tooltip">
                                         Looks good!
                                     </div>
                                 </div>
                                 <div class="col-md-4 mb-3">
                                     <label for="validationTooltip02">Last name:</label>
-                                    <input type="text" class="form-control" id="validationTooltip02" placeholder="Last name" value="Otto" required>
+                                    <input type="text" class="form-control" id="validationTooltip02" name="lname" placeholder="Last name" value="Otto" required>
                                     <div class="valid-tooltip">
                                         Looks good!
                                     </div>
@@ -527,7 +527,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
                                         </div>
-                                        <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Username" aria-describedby="validationTooltipUsernamePrepend" required>
+                                        <input type="text" class="form-control" id="validationTooltipUsername" name="uname" placeholder="Username" aria-describedby="validationTooltipUsernamePrepend" required>
                                         <div class="invalid-tooltip">
                                             Please choose a unique and valid username.
                                         </div>
@@ -539,7 +539,7 @@
                                 <div class="col-md-4 mb-3">
                                     <label for="validationTooltip03">Subject || Topic:</label>
                                     <div class="input-group">
-                                        <input type="text" class="form-control" id="validationTooltip03" placeholder="Subject or Topic" required>
+                                        <input type="text" class="form-control" id="validationTooltip03" name="topic" placeholder="Subject or Topic" required>
                                         <div class="invalid-tooltip">
                                             Please provide a valid subject or topic.
                                         </div>
@@ -547,7 +547,7 @@
                                 </div>
                                 <div class="col-md-4 mb-3">
                                     <label for="validationTooltip04">Country:</label>
-                                    <input type="text" class="form-control" id="validationTooltip04" placeholder="Country" required>
+                                    <input type="text" class="form-control" id="validationTooltip04" name="country" placeholder="Country" required>
                                     <div class="invalid-tooltip">
                                         Please provide a valid country.
                                     </div>
@@ -565,7 +565,7 @@
                                             </div> -->
                                         <!-- </div> -->
                                         <div class="custom-file">
-                                            <input type="file" class="custom-file-input" id="validatedCustomFile" required multiple>
+                                            <input type="file" class="custom-file-input" name="document" id="validatedCustomFile" required multiple>
                                             <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
                                             <div class="invalid-feedback">Example invalid custom file feedback</div>
                                         </div>
@@ -576,21 +576,21 @@
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="validationTooltip06">Address:</label>
-                                    <input type="text" class="form-control" id="validationTooltip06" placeholder="enter your address" required />
+                                    <input type="text" class="form-control" name="address" id="validationTooltip06" placeholder="enter your address" required />
                                     <div class="invalid-tooltip">
                                         Please provide a valid address.
                                     </div>
                                 </div>
                                 <div class="col-md-3 mb-3">
                                     <label for="validationTooltip07">City:</label>
-                                    <input type="text" class="form-control" id="validationTooltip07" placeholder="City" required />
+                                    <input type="text" class="form-control" name="city" id="validationTooltip07" placeholder="City" required />
                                     <div class="invalid-tooltip">
                                         Please provide a valid city.
                                     </div>
                                 </div>
                                 <div class="col-md-3 mb-3">
                                     <label for="validationTooltip08">State:</label>
-                                    <input type="text" class="form-control" id="validationTooltip08" placeholder="State" required maxlength="12" />
+                                    <input type="text" class="form-control" name="state" id="validationTooltip08" placeholder="State" required maxlength="12" />
                                     <div class="invalid-tooltip">
                                         Please provide a valid state.
                                     </div>
@@ -601,7 +601,7 @@
                                 <div class="col-md-4 mb-3">
                                     <label for="validationTooltip09"> Zip</label>
                                     <div class="input-group">
-                                        <input type="text" class="form-control" id="validationTooltip09" placeholder="enter your Zip code" required>
+                                        <input type="text" class="form-control" name="zipcode" id="validationTooltip09" placeholder="enter your Zip code" required>
                                         <div class="invalid-tooltip">
                                             Please provide a valid city.
                                         </div>
@@ -610,14 +610,14 @@
                                 <div class="col-md-4 mb-3">
                                     <div class="form-group">
                                         <label for="input-mask">Telephone No:</label>
-                                        <input id="input-mask" class="form-control input-mask" data-inputmask="'mask': '999-9999-999-999'">
+                                        <input id="input-mask" class="form-control input-mask" name="phonenumber" data-inputmask="'mask': '999-9999-999-999'">
                                         <span class="text-muted">e.g "234-8141-210-260"</span>
                                     </div>
                                 </div>
                                 <div class="col-md-4 mb-3">
                                     <div class="form-group">
                                         <label for="input-email">Email address::</label>
-                                        <input id="input-email" class="form-control input-mask" data-inputmask="'alias': 'email'">
+                                        <input id="input-email" class="form-control input-mask" name="email" data-inputmask="'alias': 'email'">
                                         <span class="text-muted">_@_._</span>
                                     </div>
 
@@ -627,7 +627,7 @@
                             <div class="form-group">
                                 <label>Comment: </label>
                                 <div>
-                                    <textarea required class="form-control" rows="5">kindly write your message and caption here...</textarea>
+                                    <textarea required class="form-control" name="message" rows="5">kindly write your message and caption here...</textarea>
                                     <div class="invalid-tooltip">
                                         Please write something...
                                     </div>
