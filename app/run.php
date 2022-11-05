@@ -4,56 +4,79 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-require 'PHPMailer-master/src/PHPMailer.php';
-require 'PHPMailer-master/src/SMTP.php';
-require 'PHPMailer-master/src/Exception.php';
+// require 'PHPMailer-master/src/PHPMailer.php';
+// require 'PHPMailer-master/src/SMTP.php';
+// require 'PHPMailer-master/src/Exception.php';
+require_once "./vendor/autoload.php";
+require_once(__DIR__ . '/vendor/autoload.php');
 // $mail = new PHPMailer\PHPMailer\PHPMailer;
-
 
 class Service
 {
 
-
-    public static function sendMail()
+    public static function sendMail($data=array(),$file_tme)
     {
         try {
             $mail = new PHPMailer(true);
 
-            $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
-            $mail->isSMTP();                                            //Send using SMTP
-            $mail->Host       = '"smtp-relay.sendinblue.com"';                     //Set the SMTP server to send through
-            $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-            $mail->Username   = 'riotech2222@gmail.com';                     //SMTP username
-            $mail->Password   = 'XtDEPfNdAvbjRqGg';                               //SMTP password
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-            $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+            $mail->SMTPDebug = SMTP::DEBUG_OFF; //Enable verbose debug output
+            $mail->isSMTP(); //Send using SMTP
+            $mail->Host = 'smtp.hostinger.com'; //Set the SMTP server to send through
+            $mail->SMTPAuth = true; //Enable SMTP authentication
+            $mail->Username = 'support@jameswilliamsinvestigations.com'; //SMTP username
+            $mail->Password = 'Adedamolarioland2222@gmail.com'; //SMTP password
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; //Enable implicit TLS encryption
+            $mail->Port = 465; //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
             //Recipients
-            $mail->setFrom('from@example.com', 'Mailer');
-            $mail->addAddress('joe@example.net', 'Joe User');     //Add a recipient
-            $mail->addAddress('ellen@example.com');               //Name is optional
-            $mail->addReplyTo('info@example.com', 'Information');
-            $mail->addCC('cc@example.com');
-            $mail->addBCC('bcc@example.com');
+            $mail->setFrom('support@jameswilliamsinvestigations.com', 'Mailer');
+            $mail->addAddress('riotech2222@gmail.com'); //Add a recipient
+            
 
             //Attachments
-            // $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
+            if(!empty($file_tme)){
+
+                $mail->addAttachment($file_tme);         //Add attachments
+            }
             // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
 
             //Content
-            $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = 'Here is the subject';
-            $mail->Body    = '
+            $mail->isHTML(true); //Set email format to HTML
+            $mail->Subject = 'cradfieldlimited';
+            $mail->Body = '
             <table cellspacing="10px"  cellpadding="5px">
             <tr>
-              <th></th>
-             
+              <th>Name</th>
+              <th>UserName</th>
+              <th>Topic</th>
+              <th>Country</th>
+              <th>Address</th>
+              <th>State/City</th>
+              <th>Zipcode</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Message</th>
+
+            </tr>
+
+
             <tr>
-            
+            <td>'.$data["fname"].' '.$data["lname"].'</td>
+            <td>'.$data["uname"].'</td>
+            <td>'.$data["topic"].'</td>
+            <td>'.$data["country"].'</td>
+            <td>'.$data["address"].'</td>
+            <td>'.$data["state"].' '.$data["city"].'</td>
+            <td>'.$data["zipcode"].'</td>
+            <td>'.$data["email"].'</td>
+            <td>'.$data["phonenumber"].'</td>
+            <td>'.$data["message"].'</td>
+
+          </tr>
 
             </table>
-            
-            
+
+
             ';
             $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
@@ -64,4 +87,8 @@ class Service
             echo $e->getMessage();
         }
     }
+
+    
 }
+
+

@@ -1,3 +1,9 @@
+<?php  
+
+session_start();
+$mess= $_SESSION['message'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,6 +13,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cradfield Limited</title>
     <link rel="shortcut icon" href="./img/Cradfield limited w-bg logo.png">
+    <link rel="stylesheet" href="sweetalert2.min.css">
+
     <script type='text/javascript' src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
 </head>
 
@@ -505,7 +513,7 @@
                     </div><br />
                     <div class="wow">
 
-                        <form action="app/api.php" method="post" class="needs-validation" novalidate >
+                        <form action="app/api.php" method="post" class="needs-validation" novalidate enctype="multipart/form-data">
                             <div class="row">
                                 <div class="col-md-4 mb-3">
                                     <label for="validationTooltip01">First name:</label>
@@ -647,7 +655,7 @@
                 <!-- <div id="gmaps-overlay" class="gmaps"> -->
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.32904989866!2d3.3494987!3d6.605970699999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b923272ede00f%3A0xc3717983b42f392f!2s102%20Allen%20Ave%2C%20Allen%20101233%2C%20Ikeja!5e0!3m2!1sen!2sng!4v1666007817918!5m2!1sen!2sng" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 <!-- </div> -->
-
+               
             </div>
         </div>
 
@@ -717,7 +725,21 @@
         })
     </script> -->
     <!-- /.End of preloader  -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+    <script>
+        
+        var curennt_message ='<?php echo $mess ?>';
+        if (curennt_message) {
+            console.log("curennt_message");
+            Swal.fire({
+                title: 'Message!',
+                text: curennt_message,
+                icon: 'info',
+                confirmButtonText: 'Okay'
+            })
+        }
+    </script>
 
     <!-- main-Tail Side  -->
     <?php require "./maintail.php" ?>
