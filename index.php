@@ -2,6 +2,7 @@
 
 session_start();
 $mess= $_SESSION['message'];
+$_SESSION['message']="";
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +15,14 @@ $mess= $_SESSION['message'];
     <title>Cradfield Limited</title>
     <link rel="shortcut icon" href="./img/Cradfield limited w-bg logo.png">
     <link rel="stylesheet" href="sweetalert2.min.css">
-
+    <script src="https://www.momentcrm.com/embed"></script>
+<script>
+  MomentCRM('init', {
+    'teamVanityId': 'cradfield',
+    'doChat': true,
+    'doTracking': true,
+  });
+</script>
     <script type='text/javascript' src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
 </head>
 
