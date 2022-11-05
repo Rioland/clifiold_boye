@@ -10,7 +10,13 @@
     <!-- <meta content="Themesdesign" name="author" /> -->
     <!-- App favicon -->
     <link rel="shortcut icon" href="./img/Cradfield limited w-bg logo.png">
-
+    <script>
+  MomentCRM('init', {
+    'teamVanityId': 'cradfield',
+    'doChat': true,
+    'doTracking': true,
+  });
+</script>
     <!-- Ajax for Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
